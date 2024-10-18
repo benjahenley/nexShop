@@ -1,16 +1,33 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import Navbar from "@/presentation/components/ui/navbar/page";
+import { ThemeProvider } from "@/presentation/components/providers/darkMode";
+import "public/css/embla/embla.css";
+import "public/css/embla/base.css";
+import "public/css/global.css";
+import HomeComp from "@/presentation/components/pages/home/page";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const generalSans = localFont({
+  src: [
+    {
+      path: "../fonts/GeneralSans-Variable.ttf",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "../fonts/GeneralSans-VariableItalic.ttf",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-general-sans",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+
+const clashDisplay = localFont({
+  src: "../fonts/ClashDisplay-Variable.ttf",
   weight: "100 900",
+  style: "normal",
+  variable: "--font-clash-display",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +43,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        className={`${generalSans.variable} ${clashDisplay.variable} min-h-screen font-sans antialiased `}>
+        <ThemeProvider>
+          <Navbar />
+          <HomeComp className=""></HomeComp>
+        </ThemeProvider>
       </body>
     </html>
   );
