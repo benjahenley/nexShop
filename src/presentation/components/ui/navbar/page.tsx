@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   AnimatedNavItem,
-  Subtitle,
-  TinyText,
-  Title,
   TitleWhite,
 } from "@/presentation/components/ui/texts/page";
 import { BurguerIcon, CartImg, CrossImg, ProfileIcon } from "public/svg";

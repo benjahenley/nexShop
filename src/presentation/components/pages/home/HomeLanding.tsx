@@ -4,7 +4,6 @@ import {
   BodyTitle,
   LargeText,
   Subtitle,
-  TinyText,
   Title,
 } from "@/presentation/components/ui/texts/page";
 import Image from "next/image";
@@ -49,10 +48,10 @@ export default function HomeLanding({ className, onSubmit }: CardProps) {
         className={`${className} flex flex-col justify-center items-center`}
         onSubmit={onSubmit}>
         <Title className="text-center">NexShop</Title>
-        <TinyText className="max-w-sm text-center mt-4 ">
+        {/* <TinyText className="max-w-sm text-center mt-4 ">
           Discover the latest trends and exclusive deals, all wrapped up in a
           modern, user-friendly interface.
-        </TinyText>
+        </TinyText> */}
 
         <BlueButtonAnimated className="mb-5 mt-8">
           Find Products

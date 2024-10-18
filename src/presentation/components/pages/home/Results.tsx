@@ -1,12 +1,4 @@
-import Card from "@/presentation/components/ui/product-card/page";
-import { Input } from "@/presentation/components/ui/Input/page";
-import { BlueButton } from "@/presentation/components/ui/buttons/page";
-import {
-  LargeText,
-  Subtitle,
-  Title,
-} from "@/presentation/components/ui/texts/page";
-import { useState } from "react";
+import { LargeText } from "@/presentation/components/ui/texts/page";
 
 interface CardProps {
   className?: string;

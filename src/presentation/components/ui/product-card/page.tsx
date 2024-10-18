@@ -1,10 +1,4 @@
-import {
-  LargeText,
-  Subtitle,
-  Text,
-  TextAllwaysBlack,
-  TinyText,
-} from "@/presentation/components/ui/texts/page";
+import { TextAllwaysBlack } from "@/presentation/components/ui/texts/page";
 
 interface CardProps {
   id: string;
